@@ -1859,3 +1859,170 @@ footer a:hover {
         font-size: 1rem !important;
     }
 }
+
+/* Prayer Times Page Mobile Optimization - Ultra Compact for 5.5" screens */
+@media (max-width: 576px) {
+    /* Prayer Times Page Specific */
+    .prayer-times-fullscreen-page {
+        padding-top: 70px !important; /* Reduce top padding */
+    }
+    
+    .fullscreen-prayer-container {
+        padding: 0.75rem !important;
+        margin: 0.5rem !important;
+        border-radius: 12px !important;
+    }
+    
+    /* Header Section - Ultra Compact */
+    .fullscreen-prayer-container .text-center {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .fullscreen-prayer-container h4 {
+        font-size: 1rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .fullscreen-prayer-container p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    /* Current Time - Compact */
+    .fullscreen-prayer-container .current-time {
+        font-size: 0.8rem !important;
+        padding: 0.4rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+    
+    .fullscreen-prayer-container .current-time span {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Countdown - Compact */
+    .fullscreen-prayer-container .next-prayer-countdown {
+        padding: 0.4rem !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Grid Layout - Optimized for 5.5" screens */
+    .fullscreen-prayer-container .prayer-times-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.3rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Prayer Cards - Ultra Compact */
+    .fullscreen-prayer-container .prayer-time-row {
+        padding: 0.4rem !important;
+        margin-bottom: 0 !important;
+        border-radius: 8px !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    /* Prayer Names - Smaller */
+    .fullscreen-prayer-container .prayer-name {
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.2rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-name i {
+        font-size: 0.7rem !important;
+        margin-right: 0.2rem !important;
+    }
+    
+    /* Prayer Times - Compact */
+    .fullscreen-prayer-container .prayer-times {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.1rem !important;
+        align-items: center !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time {
+        padding: 0.1rem !important;
+        text-align: center !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-label {
+        font-size: 0.6rem !important;
+        line-height: 1 !important;
+        margin-bottom: 0.1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-value {
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* Badges - Smaller */
+    .fullscreen-prayer-container .badge {
+        font-size: 0.55rem !important;
+        padding: 0.1rem 0.3rem !important;
+        margin-top: 0.2rem !important;
+    }
+    
+    /* Jumu'ah Card - Special Compact Layout */
+    .fullscreen-prayer-container .jumuah-card {
+        grid-column: span 2 !important; /* Full width for Jumu'ah */
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0.5rem !important;
+    }
+    
+    .fullscreen-prayer-container .jumuah-card .prayer-name {
+        margin-bottom: 0 !important;
+        text-align: left !important;
+    }
+    
+    .fullscreen-prayer-container .jumuah-card .prayer-times {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    /* Info Cards - Compact */
+    .prayer-times-fullscreen-page .info-card {
+        padding: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .prayer-times-fullscreen-page .info-card h5 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .prayer-times-fullscreen-page .info-card ul li,
+    .prayer-times-fullscreen-page .info-card p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    /* Footer - Compact */
+    .prayer-times-fullscreen-page footer {
+        padding: 1rem 0 !important;
+    }
+    
+    .prayer-times-fullscreen-page footer h5 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .prayer-times-fullscreen-page footer p,
+    .prayer-times-fullscreen-page footer li {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+}

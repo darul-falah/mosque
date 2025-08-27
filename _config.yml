@@ -1,0 +1,103 @@
+# Darul Falah Mosque Website Configuration
+
+# Site settings
+title: "Darul Falah Mosque"
+description: "Community-focused Islamic center serving the local Muslim community with prayer services, educational programs, and community engagement opportunities."
+url: "https://username.github.io"
+baseurl: "/darul-falah-mosque"
+
+# Contact information
+email: info@darulfalah.org
+phone: "+1 (234) 567-890"
+address: "123 Community Street, Your City, State 12345"
+
+# Social media links
+social:
+  facebook: "https://facebook.com/darulfalah"
+  twitter: "https://twitter.com/darulfalah"
+  instagram: "https://instagram.com/darulfalah"
+  youtube: "https://youtube.com/darulfalah"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+lang: en_US
+author: "Darul Falah Mosque"
+twitter:
+  username: darulfalah
+  card: summary_large_image
+
+# Collections (for future expansion)
+collections:
+  news:
+    output: true
+    permalink: /:collection/:name/
+  services:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Darul Falah Mosque"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .git/
+  - .gitignore
+  - package.json
+  - package-lock.json
+
+# Include files
+include:
+  - _pages
+
+# Sass configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Timezone
+timezone: America/New_York
+
+# Pagination (if needed for news)
+paginate: 10
+paginate_path: "/news/page:num/"
+
+# GitHub Pages specific settings
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

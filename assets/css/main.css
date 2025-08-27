@@ -1,0 +1,1861 @@
+/* Darul Falah Mosque - Custom Styles */
+
+/* Root Variables - ICCI Exact Theme Colors */
+:root {
+    --primary-color: #CA8E44;
+    --secondary-color: #E6A85C;
+    --accent-color: #A67235;
+    --light-gold: #F5E6D3;
+    --dark-gold: #8B5A2B;
+    --cream: #FAF4ED;
+    --beige: #EDE0D0;
+    --brown: #2d1810;
+    --dark-brown: #1a0f08;
+    --light-bg: #FEFCF8;
+    --dark-bg: #2c2416;
+    --text-dark: #2d1810;
+    --text-light: #5a4a35;
+    --border-color: #E6D5C3;
+    --shadow: 0 3px 12px rgba(202, 142, 68, 0.2);
+    --border-radius: 8px;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--brown);
+}
+
+/* Consistent Heading Colors */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-brown) !important;
+}
+
+/* Section Titles */
+.section-title,
+.prayer-times-title {
+    color: var(--dark-brown) !important;
+    font-weight: 700;
+}
+
+/* Consistent Text Colors */
+p, span, div, li, td, th {
+    color: var(--brown);
+}
+
+/* Card and Content Text */
+.card-text,
+.card-body p,
+.content-text {
+    color: var(--brown) !important;
+}
+
+/* Feature Items */
+.feature-item {
+    color: var(--brown) !important;
+}
+
+/* Custom Bootstrap Overrides - Match Header and Footer */
+.bg-primary,
+.navbar-dark {
+    background-color: var(--dark-bg) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Header Styles - ICCI Theme */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--secondary-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hero Section - ICCI Golden Islamic Pattern Theme */
+.hero-section {
+    background: 
+        linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="islamic-pattern" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M20,5 L35,20 L20,35 L5,20 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="20" cy="20" r="8" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/><path d="M20,12 L28,20 L20,28 L12,20 Z" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23islamic-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Hero Section Text Styling - Dark Text for Visibility */
+.hero-section h1 {
+    color: var(--dark-brown) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.hero-section p {
+    color: var(--brown) !important;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.hero-section .lead {
+    color: var(--text-dark) !important;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+.hero-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    max-height: 450px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, rgba(202, 142, 68, 0.9), rgba(166, 114, 53, 0.8)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="overlay-pattern" patternUnits="userSpaceOnUse" width="30" height="30"><path d="M15,3 L27,15 L15,27 L3,15 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/><circle cx="15" cy="15" r="6" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="60" height="60" fill="url(%23overlay-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.hero-image-container:hover .overlay-content {
+    transform: translateY(0);
+}
+
+/* Prayer Times Styles - Golden Islamic Theme */
+.prayer-times-preview {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+    border: 3px solid var(--secondary-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.current-time {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(202, 142, 68, 0.4);
+    border: 3px solid var(--secondary-color);
+    text-align: center;
+}
+
+.current-time span {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.next-prayer-countdown {
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-gold)) !important;
+    border: 3px solid var(--primary-color) !important;
+    color: var(--brown) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(202, 142, 68, 0.4) !important;
+}
+
+.next-prayer-countdown .countdown-timer {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--brown);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.prayer-time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin: 0.25rem 0;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(139, 105, 20, 0.15);
+}
+
+.prayer-time-row:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.prayer-time-row:hover {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(139, 105, 20, 0.25);
+    transform: translateY(-1px);
+}
+
+.prayer-name {
+    font-weight: 700;
+    color: var(--brown);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prayer-name i {
+    color: var(--dark-gold);
+    margin-right: 0.5rem;
+}
+
+.prayer-times {
+    display: flex;
+    gap: 3rem;
+}
+
+.prayer-time {
+    text-align: center;
+}
+
+.prayer-time-label {
+    font-size: 0.9rem;
+    color: var(--brown);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.prayer-time-value {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--brown);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.next-prayer {
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-gold)) !important;
+    color: var(--brown) !important;
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.next-prayer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.next-prayer .prayer-time-value,
+.next-prayer .prayer-time-label {
+    color: var(--dark-brown) !important;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.next-prayer .prayer-name {
+    color: var(--dark-brown) !important;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.next-prayer .prayer-name i {
+    color: var(--accent-color) !important;
+}
+
+.prayer-passed {
+    opacity: 0.6;
+}
+
+.prayer-passed .prayer-name,
+.prayer-passed .prayer-time-value {
+    color: var(--text-light);
+}
+
+/* Sunnah Prayer Styling - Golden Theme */
+.sunnah-prayer {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--beige) 100%) !important;
+    border: 1px solid var(--secondary-color) !important;
+    border-left: 4px solid var(--secondary-color) !important;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.sunnah-prayer .prayer-name {
+    color: var(--brown) !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sunnah-prayer .prayer-time-value {
+    color: var(--brown) !important;
+    font-weight: 900;
+    font-size: 1.3rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.sunnah-prayer .prayer-time-label {
+    color: var(--brown) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Countdown Animation */
+.countdown-timer {
+    animation: pulse-countdown 2s infinite;
+}
+
+@keyframes pulse-countdown {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Real-time Clock Styles - ICCI Theme */
+#current-time-display {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+/* News Cards - ICCI Theme */
+.news-card {
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
+    box-shadow: 0 3px 12px rgba(202, 142, 68, 0.15);
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(202, 142, 68, 0.25);
+    border-color: var(--primary-color);
+}
+
+.news-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.news-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-image {
+    transform: scale(1.05);
+}
+
+.featured-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(202, 142, 68, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--dark-gold);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.news-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.news-card .card-title:hover {
+    color: var(--accent-color);
+}
+
+.news-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.news-card .btn {
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.news-card .btn:hover {
+    transform: translateX(5px);
+}
+
+/* Community Section - ICCI Golden Pattern Theme */
+.community-section {
+    background: 
+        linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 50%, #ffffff 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><pattern id="community-pattern" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M20,2 L38,20 L20,38 L2,20 Z" fill="none" stroke="rgba(202,142,68,0.08)" stroke-width="1"/><circle cx="20" cy="20" r="10" fill="none" stroke="rgba(202,142,68,0.05)" stroke-width="0.5"/></pattern></defs><rect width="80" height="80" fill="url(%23community-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.community-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.community-image {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.community-image-container:hover .community-image {
+    transform: scale(1.02);
+}
+
+.community-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: 
+        linear-gradient(135deg, var(--primary-color), var(--accent-color)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><pattern id="badge-pattern" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M10,2 L18,10 L10,18 L2,10 Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/></pattern></defs><rect width="40" height="40" fill="url(%23badge-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(202, 142, 68, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.community-features .feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.community-features .feature-item i {
+    font-size: 1.25rem;
+}
+
+/* Quran Verse Styling - Islamic Ireland Theme */
+.quran-verse {
+    background: linear-gradient(135deg, var(--gold-light) 0%, #ffffff 100%);
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3);
+    position: relative;
+}
+
+.quran-verse::before {
+    content: '﴿';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: white;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.quran-verse::after {
+    content: '﴾';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: white;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.arabic-text {
+    font-family: 'Amiri', serif !important;
+    font-size: 1.3rem !important;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--primary-color) !important;
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 1rem;
+}
+
+.translation {
+    font-style: italic;
+    color: var(--brown);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.quran-verse small {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Live Stream Section - ICCI Golden Pattern Theme */
+.live-stream-info {
+    background: 
+        linear-gradient(135deg, var(--beige) 0%, var(--light-gold) 50%, var(--cream) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="stream-pattern" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M15,3 L27,15 L15,27 L3,15 Z" fill="none" stroke="rgba(202,142,68,0.1)" stroke-width="0.8"/><circle cx="15" cy="15" r="7" fill="none" stroke="rgba(202,142,68,0.06)" stroke-width="0.4"/></pattern></defs><rect width="60" height="60" fill="url(%23stream-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-top: 3px solid var(--primary-color);
+}
+
+.live-stream-features {
+    background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(202, 142, 68, 0.15);
+    border: 2px solid var(--border-color);
+}
+
+.live-stream-card .card {
+    background: 
+        linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><pattern id="card-pattern" patternUnits="userSpaceOnUse" width="25" height="25"><path d="M12.5,2 L23,12.5 L12.5,23 L2,12.5 Z" fill="none" stroke="rgba(202,142,68,0.08)" stroke-width="0.6"/><circle cx="12.5" cy="12.5" r="5" fill="none" stroke="rgba(202,142,68,0.04)" stroke-width="0.3"/></pattern></defs><rect width="50" height="50" fill="url(%23card-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-radius: 20px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 6px 20px rgba(202, 142, 68, 0.2);
+}
+
+.live-stream-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    margin-right: 0.5rem;
+}
+
+.live-indicator-large {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.stream-stats .stat-item {
+    text-align: center;
+}
+
+.stream-stats .stat-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+/* Footer Styles - Match Navbar */
+footer,
+.bg-dark {
+    background-color: var(--dark-bg) !important;
+}
+
+footer {
+    background-color: var(--dark-bg) !important;
+}
+
+/* Footer Text Colors - Override Global Colors */
+footer,
+footer * {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+footer h5 {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+footer a:hover {
+    color: var(--secondary-color) !important;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color) !important;
+}
+
+.newsletter-form .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.newsletter-form .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Utility Classes */
+.shadow-custom {
+    box-shadow: var(--shadow);
+}
+
+.border-radius-custom {
+    border-radius: var(--border-radius);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .prayer-times {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .prayer-time-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .social-links {
+        text-align: center;
+    }
+    
+    .social-links a {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section .d-flex {
+        flex-direction: column;
+    }
+}
+
+/* Accessibility Improvements */
+.btn:focus,
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(44, 85, 48, 0.25);
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Fullscreen Prayer Times Page Styles */
+.prayer-times-fullscreen-page {
+    background: 
+        linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 50%, #ffffff 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="prayer-bg-pattern" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M20,5 L35,20 L20,35 L5,20 Z" fill="none" stroke="rgba(202,142,68,0.05)" stroke-width="1"/><circle cx="20" cy="20" r="8" fill="none" stroke="rgba(202,142,68,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23prayer-bg-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+.fullscreen-prayer-container {
+    background: 
+        linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="container-pattern" patternUnits="userSpaceOnUse" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M20,5 L35,20 L20,35 L5,20 Z" fill="none" stroke="rgba(202,142,68,0.1)" stroke-width="1"/><circle cx="20" cy="20" r="8" fill="none" stroke="rgba(202,142,68,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23container-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 15px 50px rgba(202, 142, 68, 0.4);
+    border: 3px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.fullscreen-prayer-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.fullscreen-prayer-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fullscreen Prayer Times Styling - Compact Grid Layout */
+.fullscreen-prayer-container .prayer-times-preview {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.fullscreen-prayer-container .current-time {
+    font-size: 1.6rem !important;
+    padding: 1.5rem 2rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fullscreen-prayer-container .current-time span {
+    font-size: 2rem !important;
+    letter-spacing: 2px !important;
+}
+
+.fullscreen-prayer-container .next-prayer-countdown {
+    font-size: 1.2rem !important;
+    padding: 1rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fullscreen-prayer-container h4 {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+    color: var(--dark-brown) !important;
+}
+
+.fullscreen-prayer-container .text-muted {
+    font-size: 1.1rem !important;
+    color: var(--brown) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Compact Grid Layout for Prayer Times */
+.fullscreen-prayer-container .prayer-times-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fullscreen-prayer-container .prayer-time-row {
+    padding: 1.2rem 1.5rem !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    min-height: auto !important;
+}
+
+.fullscreen-prayer-container .prayer-name {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.fullscreen-prayer-container .prayer-time-value {
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+}
+
+.fullscreen-prayer-container .prayer-time-label {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+}
+
+.fullscreen-prayer-container .prayer-name i {
+    font-size: 1.2rem !important;
+    margin-right: 0.5rem !important;
+}
+
+.fullscreen-prayer-container .prayer-times {
+    gap: 1.5rem !important;
+    justify-content: center !important;
+}
+
+.fullscreen-prayer-container .prayer-time {
+    text-align: center !important;
+}
+
+/* Jumu'ah Card - Same Style as Other Cards */
+.jumuah-card {
+    /* Remove special styling - let it inherit from .prayer-time-row */
+}
+
+/* Info Cards */
+.info-card {
+    background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.info-card h5 {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.info-card ul li {
+    margin-bottom: 0.75rem;
+    color: var(--brown) !important;
+}
+
+.info-card i {
+    color: var(--secondary-color);
+    width: 20px;
+}
+
+/* Responsive Design for Fullscreen Prayer Times - Grid Layout */
+@media (max-width: 1200px) {
+    .fullscreen-prayer-container {
+        padding: 2rem;
+    }
+    
+    .fullscreen-prayer-container .prayer-times-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 0.8rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .prayer-times-fullscreen-page {
+        padding-top: 1rem;
+    }
+    
+    .fullscreen-prayer-container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .fullscreen-prayer-container .current-time {
+        font-size: 1.3rem !important;
+        padding: 1rem 1.5rem !important;
+    }
+    
+    .fullscreen-prayer-container .current-time span {
+        font-size: 1.6rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-times-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 0.8rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-row {
+        padding: 1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-name {
+        font-size: 1.1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-value {
+        font-size: 1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-label {
+        font-size: 0.8rem !important;
+    }
+    
+    .fullscreen-prayer-container h4 {
+        font-size: 1.8rem !important;
+    }
+    
+    .info-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fullscreen-prayer-container {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .fullscreen-prayer-container .prayer-times-list {
+        grid-template-columns: 1fr !important;
+        gap: 0.6rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-time-row {
+        padding: 0.8rem 1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-times {
+        gap: 1rem !important;
+    }
+    
+    .fullscreen-prayer-container .prayer-name {
+        font-size: 1rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+}
+
+/* Azan Player Styles */
+.azan-controls {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(202, 142, 68, 0.3);
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.azan-control-panel {
+    padding: 1rem;
+}
+
+.azan-header {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.azan-settings {
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.azan-settings .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.azan-settings .form-range::-webkit-slider-thumb {
+    background-color: var(--primary-color);
+}
+
+.azan-settings .form-range::-moz-range-thumb {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/* Azan Notifications */
+.azan-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 0.3s ease-out;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.azan-notification-info {
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-gold));
+    color: var(--dark-brown);
+    border: 2px solid var(--primary-color);
+}
+
+.azan-notification-prayer {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.azan-notification-warning {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: var(--dark-brown);
+    border: 2px solid #dc3545;
+}
+
+.azan-notification .btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.azan-notification .btn-close:hover {
+    opacity: 1;
+}
+
+/* Azan Toggle Button for Mobile */
+.azan-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none; /* Hidden by default, shown on mobile */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.azan-toggle-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.azan-toggle-btn.active {
+    background: var(--secondary-color);
+}
+
+/* Mobile Modal Backdrop */
+.azan-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1055;
+    display: none;
+}
+
+.azan-notification .btn-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--dark-brown);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.azan-notification .btn-light:hover {
+    background-color: white;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Friday Reading Section */
+.friday-reading-section {
+    background: 
+        linear-gradient(135deg, var(--beige) 0%, var(--light-gold) 50%, var(--cream) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="reading-pattern" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M15,3 L27,15 L15,27 L3,15 Z" fill="none" stroke="rgba(202,142,68,0.1)" stroke-width="0.8"/><circle cx="15" cy="15" r="7" fill="none" stroke="rgba(202,142,68,0.06)" stroke-width="0.4"/></pattern></defs><rect width="60" height="60" fill="url(%23reading-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-top: 3px solid var(--primary-color);
+}
+
+.reading-benefits {
+    background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(202, 142, 68, 0.15);
+    border: 2px solid var(--border-color);
+}
+
+.reading-card .card {
+    background: 
+        linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><pattern id="reading-card-pattern" patternUnits="userSpaceOnUse" width="25" height="25"><path d="M12.5,2 L23,12.5 L12.5,23 L2,12.5 Z" fill="none" stroke="rgba(202,142,68,0.08)" stroke-width="0.6"/><circle cx="12.5" cy="12.5" r="5" fill="none" stroke="rgba(202,142,68,0.04)" stroke-width="0.3"/></pattern></defs><rect width="50" height="50" fill="url(%23reading-card-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(202, 142, 68, 0.2);
+}
+
+.reading-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.blessing-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 50%;
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        transform: scale(1.1);
+    }
+}
+
+.reading-stats .stat-item {
+    text-align: center;
+}
+
+.reading-stats .stat-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reading-stats .clickable-pdf {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.reading-stats .clickable-pdf:hover {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(202, 142, 68, 0.2);
+}
+
+.reading-stats .clickable-pdf:hover i {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+.reading-stats .clickable-pdf:hover small {
+    color: var(--dark-brown) !important;
+    font-weight: 600;
+}
+
+/* Compact Reading Stats for Multiple Cards */
+.reading-stats-compact {
+    font-size: 0.85rem;
+}
+
+.reading-stats-compact .stat-row {
+    margin-bottom: 0.5rem;
+}
+
+.reading-stats-compact .stat-row small {
+    color: var(--brown);
+}
+
+.reading-stats-compact .clickable-pdf {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(202, 142, 68, 0.2);
+}
+
+.reading-stats-compact .clickable-pdf:hover {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(202, 142, 68, 0.2);
+    border-color: var(--primary-color);
+}
+
+.reading-stats-compact .clickable-pdf:hover i {
+    color: var(--primary-color) !important;
+    transform: scale(1.05);
+}
+
+.reading-stats-compact .clickable-pdf:hover small {
+    color: var(--dark-brown) !important;
+    font-weight: 600;
+}
+
+/* Ensure equal height cards */
+.reading-card .card.h-100 {
+    min-height: 280px;
+}
+
+.reading-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Responsive adjustments for three cards */
+@media (max-width: 992px) {
+    .reading-card .card.h-100 {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .reading-card .col-md-4 {
+        margin-bottom: 1rem;
+    }
+    
+    .reading-stats-compact .clickable-pdf {
+        padding: 0.3rem;
+    }
+}
+
+
+
+/* Responsive Azan Controls */
+@media (max-width: 768px) {
+    .azan-controls {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+    
+    .azan-notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .btn,
+    footer,
+    .azan-controls,
+    .azan-notification {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none !important;
+    }
+}
+
+/* Comprehensive Mobile Optimizations */
+@media (max-width: 576px) {
+    /* Extra small devices (phones) */
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+    
+    .navbar-toggler {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-section .lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .hero-section .btn-lg {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.25rem !important;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        display: block;
+    }
+    
+    .hero-section .d-flex.gap-3 {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    
+    /* Prayer Times Mobile - Ultra Compact */
+    .prayer-times-container {
+        padding: 0.5rem !important;
+        margin: 0.25rem !important;
+    }
+    
+    .prayer-times-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .current-time {
+        font-size: 0.8rem !important;
+        padding: 0.3rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+    
+    .next-prayer-countdown {
+        padding: 0.3rem !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+    
+    .prayer-time-row {
+        padding: 0.3rem 0.5rem !important;
+        margin-bottom: 0.15rem !important;
+        border-radius: 6px !important;
+        min-height: auto !important;
+    }
+    
+    .prayer-name {
+        font-size: 0.85rem !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .prayer-time-value {
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .prayer-time-label {
+        font-size: 0.7rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    .prayer-times {
+        gap: 0.25rem !important;
+    }
+    
+    .prayer-time {
+        padding: 0.2rem !important;
+    }
+    
+    /* Prayer Times List - Ultra Compact */
+    .prayer-times-list {
+        gap: 0.1rem !important;
+    }
+    
+    /* Badges and Labels - Smaller */
+    .badge {
+        font-size: 0.65rem !important;
+        padding: 0.2rem 0.4rem !important;
+    }
+    
+    /* Icons - Smaller */
+    .prayer-time-row i {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Remove extra margins */
+    .prayer-times-container .text-center {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .prayer-times-container h4 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .prayer-times-container p {
+        margin-bottom: 0.3rem !important;
+    }
+    
+    /* Surah Cards Mobile */
+    .reading-card .card {
+        margin-bottom: 1rem !important;
+    }
+    
+    .reading-card .card-body {
+        padding: 0.75rem !important;
+    }
+    
+    .reading-card h6 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .reading-card .fa-3x {
+        font-size: 1.75rem !important;
+    }
+    
+    .reading-stats-compact {
+        font-size: 0.75rem !important;
+    }
+    
+    .reading-stats-compact .stat-row {
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .reading-stats-compact .clickable-pdf {
+        padding: 0.4rem !important;
+        margin-top: 0.5rem !important;
+        min-height: 44px; /* Touch target */
+    }
+    
+    /* Touch-friendly buttons */
+    .btn {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+    
+    .btn-sm {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.75rem !important;
+        min-height: 40px !important;
+    }
+    
+    /* Hide Azan Controls on Mobile - Use Toggle Button Instead */
+    .azan-controls {
+        display: none !important;
+    }
+    
+    /* Show Mobile Azan Toggle Button */
+    .azan-toggle-btn {
+        display: flex !important;
+    }
+    
+    /* Mobile Azan Modal */
+    .azan-controls.mobile-modal {
+        display: block !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90% !important;
+        max-width: 350px !important;
+        z-index: 1060 !important;
+        border-radius: 15px !important;
+    }
+    
+    .azan-controls .card-body {
+        padding: 0.5rem !important;
+    }
+    
+    .azan-controls h6 {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .azan-controls .form-range {
+        height: 10px !important; /* Easier to touch */
+    }
+    
+    .azan-controls .btn-sm {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.6rem !important;
+        min-height: 36px !important;
+    }
+    
+    /* Mobile Notifications */
+    .azan-notification {
+        top: 60px !important;
+        left: 5px !important;
+        right: 5px !important;
+        width: auto !important;
+        max-width: none !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .azan-notification .btn-light {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.6rem !important;
+        min-height: 32px !important;
+    }
+    
+    /* Section Spacing - Compact for Mobile */
+    section {
+        padding: 1.5rem 0 !important;
+    }
+    
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    
+    /* Prayer Times Section - Extra Compact */
+    .prayer-times-section {
+        padding: 1rem 0 !important;
+    }
+    
+    /* Hero Section - Reduced Height */
+    .hero-section {
+        padding: 1.5rem 0 !important;
+    }
+    
+    /* Footer Mobile */
+    footer {
+        padding: 1.5rem 0 !important;
+    }
+    
+    footer h5 {
+        font-size: 1rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    footer p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Reading Benefits Mobile */
+    .reading-benefits {
+        padding: 0.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .reading-benefits .d-flex {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Quran Verse Mobile */
+    .quran-verse {
+        padding: 0.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .arabic-text {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .translation {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Medium Mobile Devices */
+@media (min-width: 577px) and (max-width: 768px) {
+    .reading-card .col-md-4 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .prayer-time-row {
+        padding: 0.75rem !important;
+    }
+    
+    .hero-section .btn-lg {
+        display: inline-block !important;
+        width: auto !important;
+        margin-right: 0.5rem !important;
+    }
+}
+
+/* Coming Soon Pages */
+.coming-soon-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+    background: linear-gradient(135deg, var(--beige) 0%, var(--light-gold) 50%, var(--cream) 100%);
+    position: relative;
+}
+
+.coming-soon-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="coming-soon-pattern" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M15,3 L27,15 L15,27 L3,15 Z" fill="none" stroke="rgba(202,142,68,0.08)" stroke-width="0.8"/><circle cx="15" cy="15" r="7" fill="none" stroke="rgba(202,142,68,0.04)" stroke-width="0.4"/></pattern></defs><rect width="60" height="60" fill="url(%23coming-soon-pattern)"/></svg>');
+    background-blend-mode: overlay;
+    z-index: 1;
+}
+
+.coming-soon-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.coming-soon-card .card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.coming-soon-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.coming-soon-banner .alert {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 100%);
+    border-left: 4px solid var(--primary-color);
+}
+
+.current-contact-info .card {
+    border: 1px solid var(--border-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.islamic-quote .card {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, #fefefe 0%, var(--cream) 100%);
+}
+
+.islamic-quote .arabic-text {
+    direction: rtl;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Mobile optimizations for coming soon pages */
+@media (max-width: 768px) {
+    .coming-soon-section {
+        padding: 80px 0 30px 0;
+    }
+    
+    .coming-soon-card .card-body {
+        padding: 2rem !important;
+    }
+    
+    .coming-soon-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .coming-soon-icon i {
+        font-size: 3rem !important;
+    }
+    
+    .islamic-quote .arabic-text {
+        font-size: 1rem !important;
+    }
+}
